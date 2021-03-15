@@ -1,0 +1,10 @@
+<form method="POST" enctype="multipart/form-data">
+    
+    {% csrf_token %}
+    <!-- this token gets models Cross-Site Request Forgery -->
+    <input type="text" name="name" id="name" placeholder="Enter Book Name">
+    <input type="text" name="desc" id="desc" placeholder="Enter Book Description">
+    <input type="number" name="price" id="price" placeholder="Enter Book Price">
+    <input type="file" name="book_image" id="book_image" placeholder="Upload Book Image">
+    <input type="submit">
+</form>

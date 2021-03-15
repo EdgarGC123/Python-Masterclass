@@ -1,5 +1,4 @@
 
-
 {% extends 'myapp/base.html' %}
 
 {% block body %}
@@ -7,5 +6,7 @@
 {{book.name}}<br/>
 {{book.desc}}<br/>
 {{book.price}}<br/>
+<img src="{{book.book_image.url}}" width='600', height='600'><br>
+<a class="btn btn-warning" href="{% url 'myapp:update' book.id %}">Update Book</a>
 
 {% endblock %}
