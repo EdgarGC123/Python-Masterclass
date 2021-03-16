@@ -1,11 +1,24 @@
 {% extends 'myapp/base.html' %}
 
 {% block body %}
-
-<h1>
-    {% for book in book_list%}
-        <a href="{% url 'myapp:detail' book.id %}"> {{book.name}}</a> <br>
-    {% endfor %}
-</h1>
-
+<div class="container">
+    <div class="row">
+        {% for book in book_list%}
+        <div class="col-md-3">
+            <div class="card">
+                {% if book.book_image %}
+                    <img src="{{book.book_image.url}}" class="card-image-top" alt="">
+                {% else %}
+                    <p>HTML Bandaid</p>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{book.name}}</h5>
+                    <p class="card-text">{{book.price}}</p>
+                    <a class="btn btn-primary" href="{% url 'myapp:detail' book.id %}"> View Details</a> <br>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

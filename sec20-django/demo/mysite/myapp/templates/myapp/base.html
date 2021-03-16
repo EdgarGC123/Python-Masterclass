@@ -7,11 +7,12 @@
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{% url 'myapp:index'%}">
               <!-- <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> -->
               Book Store
             </a>
-          </nav>
+            <a class="navbar-brand" href="{% url 'myapp:add_book' %}">Add a Book</a>
+        </nav>
           {% block body %}
 
           {% endblock %}

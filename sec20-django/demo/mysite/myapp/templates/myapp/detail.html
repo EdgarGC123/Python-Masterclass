@@ -2,11 +2,30 @@
 {% extends 'myapp/base.html' %}
 
 {% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            {% if book.book_image %}
+            <img src="{{book.book_image.url}}" width='400', height='300'>
+            {% endif %}
+        </div>
+        <div class="col-md-6">
 
-{{book.name}}<br/>
-{{book.desc}}<br/>
-{{book.price}}<br/>
-<img src="{{book.book_image.url}}" width='600', height='600'><br>
-<a class="btn btn-warning" href="{% url 'myapp:update' book.id %}">Update Book</a>
+            <h2>{{book.name}}</h2>
+            <h4>{{book.desc}}</h4>
+            <h6>{{book.price}}</h6>
+            <a class="btn btn-warning" href="{% url 'myapp:update' book.id %}">Update Book</a>
+            <!-- <a class="btn btn-danger" href="{% url 'myapp:delete' book.id %}">Delete Book</a> -->
+            <form method="POST">
+                {%csrf_token%}
+                <input class="btn btn-danger" type="submit" value="Delete Book">
+            </form>
+            <br>
+            <br>
+            <a class="btn btn-primary" href="{% url 'myapp:index'%}">Back</a>
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}
