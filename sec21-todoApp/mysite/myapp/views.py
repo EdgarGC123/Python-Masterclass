@@ -6,15 +6,10 @@ from .models import Task
 
 def index(request, id=None):
     if request.method == "POST":
-        print("IN POST...")
-        print(request.POST)
-        if 'delete' in request.POST:
-            task = Task.objects.get(id=id)
-            task.delete()
-            return redirect('/')
         name = request.POST.get('name')
         priority = request.POST.get('priority')
-        task = Task(name=name, priority=priority)
+        date = request.POST.get('date','')
+        task = Task(name=name, priority=priority, date=date)
         task.save()
         return redirect('/')
 
