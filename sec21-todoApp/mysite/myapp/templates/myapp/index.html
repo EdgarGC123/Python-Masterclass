@@ -41,8 +41,10 @@
                             <!-- <a class="btn btn-danger" href="{% url 'delete' task.id%}">Done</a> -->
                             <form action="{% url 'delete' task.id%}" method="POST">
                                 {%csrf_token%}
-                                <button class="btn btn-danger" type='submit' value="DELETE">Delete</button>
+                                <button class="btn btn-danger" type='submit' value="DELETE">Done</button>
                             </form>
+                            <br/>
+                            <a class="btn btn-success" href="{% url 'update' task.id %}">Update</a>
                         </div>
                     </div>
                     <br>
