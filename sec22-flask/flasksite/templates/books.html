@@ -1,20 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+<html>
+    
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
 </head>
 <body>
-    <ul>
-    {%for book in books%}
-        <li>
-        <img style="width: 100px; height:150px;" src={{book.img}}/>
-        <h2>Title: {{book.name}}</h2>
-        <p>Author: {{book.author}}</p>
-        </li>
-    {%endfor%}
-    </ul>
+{%block body%}
+    <div class="container">
+        <div class="row">
+            {%for book in books%}
+            <div class="col-md-3">
+                <div class="card" style="width: 14rem;">
+                    <img class="card-img-top" src={{book.img}}  alt="Card image cap"/>
+                    <div class="card-body">
+                      <h5 class="card-title">{{book.name}}</h5>
+                      <p class="card-text">{{book.author}}</p>
+                      <a href="#" class="btn btn-primary">Read Now</a>
+                    </div>
+                </div>
+                <br/>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+{%endblock%}
+
 </body>
 </html>

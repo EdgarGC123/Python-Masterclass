@@ -1,0 +1,16 @@
+http://books.toscrape.com/
+http://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html
+http://books.toscrape.com/catalogue/category/books/cultural_49/index.html
+http://books.toscrape.com/catalogue/category/books/novels_46/index.html
+http://books.toscrape.com/catalogue/category/books/science_22/index.html
+http://books.toscrape.com/catalogue/category/books/suspense_44/index.html
+http://books.toscrape.com/catalogue/category/books/travel_2/index.html
+http://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html
+http://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html
+http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html
+http://books.toscrape.com/category/books_1/index.html
+http://books.toscrape.com/diary-of-a-citizen-scientist-chasing-tiger-beetles-and-other-new-ways-of-engaging-the-world_517/index.html
+http://books.toscrape.com/health_47/index.html
+http://books.toscrape.com/historical_42/index.html
+http://books.toscrape.com/music_14/index.html
+http://books.toscrape.com/soumission_998/index.html
